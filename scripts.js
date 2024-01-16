@@ -37,3 +37,4 @@ convertButton.addEventListener("click", convertValues)
 /*ouvinte de eventos(addEventListner) adicionado no botão converter(convert-button)
 ele está companhando quando o evento de clique(click)
 acontecer. qd acontecer ele vai chamar a função (convertValues) criada acima*/
+//f
