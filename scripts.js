@@ -1,5 +1,6 @@
 const convertButton = document.querySelector(".convert-button")
-
+const currencySelect = document.querySelector(".currency-select")
+//aqui estou vendo qual moeda está selecionada
 
 function convertValues(){
    const inputCurrencyValue = document.querySelector(".input-currency").value
@@ -11,9 +12,18 @@ function convertValues(){
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")//em real
     const currencyValueConverted = document.querySelector(".currency-value")//outras moedas
 
+    
     const dolarToday = 5.20
+    const euroToday = 6.20
 
     const convertedValue = inputCurrencyValue / dolarToday
+
+    if(currencySelect.value == "dolar"){
+        
+    }
+    if(currencySelect.value == "euro"){
+
+    }
 
     //currencyValueToConvert.innerHTML = inputCurrencyValue
     /*mudar o conteudo HTML(innerHTML)*/
