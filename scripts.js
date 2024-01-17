@@ -13,8 +13,12 @@ function convertValues(){
     const currencyValueConverted = document.querySelector(".currency-value")//outras moedas
 
     
-    const dolarToday = 5.20
-    const euroToday = 6.20
+    const dolarToday = 4.93
+    const euroToday = 5.36
+    const bitcoinToday = 209946.46
+    const libraToday = 6.25
+    const ieneToday = 0.033
+    const francoToday = 5.70
 
    
     if(currencySelect.value == "dolar"){
@@ -28,6 +32,25 @@ function convertValues(){
             style: "currency",
             currency: "EUR"
         }).format(inputCurrencyValue / euroToday)
+    }
+    if(currencySelect.value == "bitcoin"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "BTC",
+            minimumFractionDigits: 6
+        }).format(inputCurrencyValue / bitcoinToday)
+    }
+    if(currencySelect.value == "libra"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue / libraToday)
+    }
+    if(currencySelect.value == "iene"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("ja-JP", {
+            style: "currency",
+            currency: "JPY"
+        }).format(inputCurrencyValue / ieneToday)
     }
 
     //currencyValueToConvert.innerHTML = inputCurrencyValue
