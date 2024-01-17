@@ -42,10 +42,32 @@ function convertValues(){
         currency: "BRL"
     }).format(inputCurrencyValue)
 
-  }
+    }
+
+function changeCurrency(){ //
+    const currencyMoney = document.getElementById("currency-money")
+    /*constante procura no HTML, elemento com id currency-money */
+    const currencyImg = document.querySelector(".img-country")
+
+    if (currencySelect.value == "dolar") {
+        currencyMoney.innerHTML = "Dólar americano"
+        currencyImg.src = "./assets/dolar.png"
+    }//se o valor for dolar, troque o nome e img para...
+
+    if (currencySelect.value == "euro") {
+        currencyMoney.innerHTML = "Euro"
+        currencyImg.src = "./assets/euro.png"
+    }//se o valor for euro, troque o nome e img para...
+   
+    convertValues()
+    //quando mudar o select, chame a fução q converte   valor
+}
 
 convertButton.addEventListener("click", convertValues)
 /*ouvinte de eventos(addEventListner) adicionado no botão converter(convert-button)
 ele está companhando quando o evento de clique(click)
 acontecer. qd acontecer ele vai chamar a função (convertValues) criada acima*/
-//f
+
+currencySelect.addEventListener("change", changeCurrency)
+
+//quando mudar o select, converta tambem o valor
