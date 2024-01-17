@@ -16,13 +16,18 @@ function convertValues(){
     const dolarToday = 5.20
     const euroToday = 6.20
 
-    const convertedValue = inputCurrencyValue / dolarToday
-
+   
     if(currencySelect.value == "dolar"){
-        
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue / dolarToday)
     }
     if(currencySelect.value == "euro"){
-
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue / euroToday)
     }
 
     //currencyValueToConvert.innerHTML = inputCurrencyValue
@@ -37,11 +42,7 @@ function convertValues(){
         currency: "BRL"
     }).format(inputCurrencyValue)
 
-    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD"
-    }).format(convertedValue)
-}
+  }
 
 convertButton.addEventListener("click", convertValues)
 /*ouvinte de eventos(addEventListner) adicionado no botão converter(convert-button)
