@@ -18,7 +18,6 @@ function convertValues(){
     const bitcoinToday = 209946.46
     const libraToday = 6.25
     const ieneToday = 0.033
-    const francoToday = 5.70
 
    
     if(currencySelect.value == "dolar"){
@@ -81,7 +80,22 @@ function changeCurrency(){ //
         currencyMoney.innerHTML = "Euro"
         currencyImg.src = "./assets/euro.png"
     }//se o valor for euro, troque o nome e img para...
-   
+    
+    if (currencySelect.value == "bitcoin") {
+        currencyMoney.innerHTML = "Bitcoin"
+        currencyImg.src = "./assets/bitcoin.png"
+    }
+
+    if (currencySelect.value == "libra") {
+        currencyMoney.innerHTML = "Libra esterlina"
+        currencyImg.src = "./assets/libra.png"
+    }
+
+    if (currencySelect.value == "iene") {
+        currencyMoney.innerHTML = "Iene japonês"
+        currencyImg.src = "./assets/iene.png"
+    }
+
     convertValues()
     //quando mudar o select, chame a fução q converte   valor
 }
